@@ -13,10 +13,9 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    /* border:1px solid red; */
 
 }
 
@@ -77,7 +76,10 @@ nav ul li a {
     font-size: 18px;
     line-height: 26px;
 }
+nav ul li a:hover {
+    text-decoration:underline;
 
+}
 .banner-section {
     max-width: 1250px;
     display: flex;
@@ -215,7 +217,7 @@ nav ul li a {
 }
 
 /*********************************
- top blogs styles start here  
+  blogs-section styles start here  
 ************************************** */
 .blogs-section {
     display: flex;
@@ -285,7 +287,7 @@ nav ul li a {
     align-items: center;
     margin-top: -200px;
 }
-
+ /* experience div or button styles start here  */
 .experience {
     width: 250px;
     height: 150px;
@@ -344,8 +346,13 @@ nav ul li a {
     border: 1px solid white;
     padding: 12px 14px;
     margin: 0px auto;
+    transition:width .5s ease-in-out;
 }
-
+.course:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+    border:2px dotted var(--hot-yellow);
+}
 .course-title {
     font-weight: 500;
     font-size:1.1em;
@@ -380,7 +387,7 @@ nav ul li a {
 }
 /*******************relative  course -section styles end here ***************************/
 /* ********************
-servic section styles start here 
+service-section styles start here 
 ************************* */
 .service-section {
    
@@ -425,7 +432,11 @@ servic section styles start here
     /* transform: rotate(90deg); */
     background: #FFFFFF;
     box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.06);
+    transition:width .5s ease-in-out;
 
+}
+.service:hover{
+    transform:scale(0.95);
 }
 
 .service-title{
@@ -452,7 +463,7 @@ servic section styles start here
     font-size: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: black;
+    color: var(--black);
     transition: .5s;
 }
 
@@ -462,7 +473,7 @@ servic section styles start here
 }
 /* service-section styles end here  */
 /* *****************************************
- sponsorss-section styles start here
+ sponsors-section styles start here
 */
 .sponsors-section{
     width: 280px;
@@ -487,6 +498,13 @@ servic section styles start here
     width: 150.83px;
     height: 50px;
     mix-blend-mode: luminosity;
+    transition:width .1s ease-in-out;
+}
+.sponsors img:hover{
+    transform: scale(0.8);
+    cursor: pointer;
+    mix-blend-mode: var(--hot-yellow);
+  
 }
 /* *****************************************
  sponsors-section styles end here
@@ -519,7 +537,15 @@ footer {
         justify-content: center;
         align-items: center;
     }
-
+    .nav-title{
+        font-size:3em;
+        
+    }
+    nav ul li a:hover {
+        text-decoration:none;
+        font-family: var(--primary-font);
+    
+    }
     nav {
         flex-direction: column;
         padding: 20px 25px;
@@ -553,10 +579,12 @@ footer {
 
     .banner-title {
         margin-top: 250px;
+        font-family: var(--primary-font);
     }
 
     .banner-description {
         font-size: 1em;
+        font-family: var(--primary-font);
     }
 
     .banner-image img {
